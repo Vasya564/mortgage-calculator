@@ -1,0 +1,28 @@
+{
+  "banks": [
+    {
+      "name": "Credit Finance",
+      "rate": "8",
+      "maxloan": "200000",
+      "minpaym": "5",
+      "loanterm": "2",
+      "id": 1
+    },
+    {
+      "name": "Central Bank",
+      "rate": "4",
+      "maxloan": "1000000",
+      "minpaym": "20",
+      "loanterm": "5",
+      "id": 2
+    },
+    {
+      "name": "Bank test",
+      "rate": "4",
+      "maxloan": "240000",
+      "minpaym": "10",
+      "loanterm": "2",
+      "id": 3
+    }
+  ]
+}

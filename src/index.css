@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+html, body {height:100%;}
+#root{
+  height: 100%;
+}
+.App{
+  height: 100%;
+}
+.content{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+  width: 100%;
+}
+.sidebar{
+  display: flex;
+  min-width: 310px;
+  height: 100%;
+  flex-direction: column;
+  background-color: #363740;
+  color:#A4A6B3;
+  grid-area: 1 / 1 / 2 / 2;
+}
+.sidebar a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.logo{
+  text-align: center;
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+.tab{
+  height: 60px;
+  position : relative;
+  font-weight: lighter;
+  font-size: 26px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+.tab:hover{
+  background-color: #3E4049;
+  color:#e4e4e4;
+  cursor: pointer;
+  transition: all .3s ease-out 10ms;
+}
+.active{
+  background-color: #3E4049;
+  color:#FFFFFF;
+  border-left: 3px solid white;
+}
+.info{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.create-button{
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: 0;
+  width: 90%;
+}
+button{
+  font-size: 18px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+  width: 150px;
+}
+button:hover{
+  background-color: #427be4;
+  cursor: pointer;
+  transition: all .3s ease-out 10ms;
+}
+.banks-list{
+  box-sizing: border-box;
+  border: 1px solid #DFE0EB;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  overflow-y: auto;
+}
+.bank-card{
+  box-sizing: border-box;
+  display: flex;
+  height: 15%;
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid lightgrey;
+  transition: all .3s ease-out 10ms;
+}
+.bank-card:hover{
+  background-color: #f4f3f3;
+}
+.bank-card p{
+  font-size: 17px;
+}
+.bank{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.bank h3{
+  margin-bottom: 10px;
+}
+.bank-name{width: 15%;}
+.bank-rate{width: 15%;}
+.bank-maxloan{width: 20%;}
+.bank-mindopay{width: 20%;}
+.bank-loanterm{width: 15%;}
+.bank-buttons{width: 15%;}
+.create-form{
+  display: flex;
+  width: 30%;
+  font-size: 22px;
+  margin: auto;
+  flex-direction: column;
+}
+.create-form input, select{
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.create-form button{
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 150px;
+}
+.errorMsg{
+  height: 30px;
+  color:red;
+}
+.error{
+  box-sizing: border-box;
+  border: 1px solid #DFE0EB;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  font-size: 30px;
+}
