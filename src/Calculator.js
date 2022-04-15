@@ -12,13 +12,15 @@ const Calculator = () => {
     const handleCalculate = (e) =>{
         e.preventDefault();
         if (selBank != null){
+            let loanInt = parseInt(loan);
+            let paymentInt = parseInt(payment);
             let air  = banks[selBank-1].rate / 1200;
             let term = banks[selBank-1].loanterm * 12;
-            let downPayment = (parseInt(loan) / 100) * banks[selBank-1].minpaym;
-            if (parseInt(loan) <= banks[selBank-1].maxloan){
-                if(parseInt(payment) >= downPayment){
-                    if(parseInt(loan) > parseInt(payment)){
-                        let result = Math.round((loan-payment)*(air * Math.pow((1 + air), term))/(Math.pow((1 + air), term) - 1));
+            let downPayment = (loanInt / 100) * banks[selBank-1].minpaym;
+            if (loanInt <= banks[selBank-1].maxloan){
+                if(paymentInt >= downPayment){
+                    if(loanInt > paymentInt){
+                        let result = Math.round((loanInt-paymentInt)*(air * Math.pow((1 + air), term))/(Math.pow((1 + air), term) - 1));
                         setMortgage(result);
                         setMessage('');
                     }
