@@ -18,7 +18,7 @@ const Calculator = () => {
             if (parseInt(loan) <= banks[selBank-1].maxloan){
                 if(parseInt(payment) >= downPayment){
                     if(parseInt(loan) > parseInt(payment)){
-                        let result = Math.round(loan*(air * Math.pow((1 + air), term))/(Math.pow((1 + air), term) - 1));
+                        let result = Math.round((loan-payment)*(air * Math.pow((1 + air), term))/(Math.pow((1 + air), term) - 1));
                         setMortgage(result);
                         setMessage('');
                     }
